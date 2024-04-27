@@ -1,0 +1,67 @@
+// Place your key bindings in this file to override the defaults
+[ 
+    // Terminal Navigation
+    {
+        "key": "alt+j",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "alt+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "alt+shift+a",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus || terminalIsActive"
+    },
+    {
+        "key": "alt+shift+b",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus || terminalIsActive"
+    },
+    {
+        "key": "alt+shift+d",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus || terminalIsActive"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletFocus"  
+    }, 
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus && !explorerResourceReadonly"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen" 
+    }
+]

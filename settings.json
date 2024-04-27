@@ -1,0 +1,151 @@
+{
+    // vs code general settings 
+    "window.zoomLevel": 1.0,
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Lotus Dark",
+    "terminal.explorerKind": "both",
+  
+    // vs code editor  settings
+    "editor.formatOnSave": false,
+    "editor.lineNumbers": "relative",
+  
+    // vs code vim settings  
+    "vim.leader": "<Space>",
+    "vim.timeout": 2000,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // remap jk to <Esc>
+        { "before": ["j", "k"], "after": ["<Esc>"] },
+        
+        // remap ; to :
+        { "before": [";"], "after": [":"] },
+       
+
+        // Navigation
+        // Switch buffers
+        { "before": ["<S-tab>"], "commands": [":bprevious"] },
+        { "before": ["<tab>"], "commands": [":bnext"] },
+        { "before": ["leader", "x"], "commands": [":q"]},
+
+        // Navigations 
+        // split window
+        { "before": ["<leader>", "s", "s"], "commands": [":split"] },
+        { "before": ["<leader>", "s", "v"], "commands": [":vsplit"] },
+        { "before": ["<leader>", "s", "o"], "commands": [":only"] },
+        { "before": ["<leader>", "s", "q"], "commands": [":close"], "when": "editorFocus" },
+        { "before": ["<leader>", "w", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["<leader>", "w", "l"], "commands": ["workbench.action.focusRightGroup"] }, 
+        { "before": ["<leader>", "w", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+        { "before": ["<leader>", "w", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+        { "before": ["<C-n>"], "commands": ["workbench.explorer.explorer"] },
+        { "before": ["<C-n>"], "commands": ["workbench.action.toggleSidebarVisibility"], "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'" },
+        { "before": ["leader", "e"], "commands": ["workbench.explorer.fileView.focus"] },
+        { "before": ["leader", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "f", "m"], "commands": ["editor.action.formatDocument"], "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"},
+    
+        // toggle functionality
+        // inlay hints
+        { "before": ["leader", "t", "i"], "commands": ["settings.cycle.inlayHints"] },
+        // format on save
+        { "before": ["leader", "t", "f"], "commands": ["settings.cycle.formatOnSave"] },
+        // relative numbers
+        { "before": ["leader", "t", "r"], "commands": ["settings.cycle.relativeNumbers"] },
+    ],
+    
+  
+    // vs code zig settings
+    "zig.path": "C:\\Users\\eskil\\scoop\\apps\\zig-dev\\0.12.0-dev.1807\\zig.exe",
+    "zig.initialSetupDone": true,
+    "zig.buildOnSave": true,
+    "zig.zls.path": "C:\\Users\\eskil\\scoop\\apps\\zls\\current\\bin\\zls.exe",
+    "zig.zls.enableBuildOnSave": true,
+    "zig.zls.warnStyle": true,
+    "zig.zls.zigLibPath": "C:\\Users\\eskil\\scoop\\apps\\zig-dev\\0.12.0-dev.1807\\lib",
+   
+    // vs code go settings
+    "go.inlayHints.assignVariableTypes": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.constantValues": true,
+    "go.inlayHints.functionTypeParameters": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true,
+    "go.formatTool": "gofumpt",
+    
+    // vs code oding settings
+    "ols.server.path": null,
+
+
+    "settings.cycle": [
+        // format on save cycler
+        {
+            "id": "formatOnSave",
+            "name": "Format on Save",
+            "description": "Toggle format on save",
+            "default": false,
+            "values": [
+                {
+                    "editor.formatOnSave": true
+                }, 
+            
+                {
+                    "editor.formatOnSave": false
+                }
+           ]
+        },
+
+        // relative numbers cycler
+        {
+            "id": "relativeNumbers",
+            "name": "Relative Numbers",
+            "description": "Toggle relative numbers",
+            "default": true,
+            "values": [
+                {
+                    "editor.lineNumbers": "relative"
+                }, 
+            
+                {
+                    "editor.lineNumbers": "on"
+                }
+           ]
+        },
+       
+        // inlay hints cycler
+        {
+            "id": "inlayHints",
+            "name": "Inlay Hints",
+            "description": "Toggle inlay hints",
+            "default": false,
+            "values": [
+                {
+                    // not optimal, but it works for now -  Go inlay hints
+                    "go.inlayHints.assignVariableTypes": true,
+                    "go.inlayHints.compositeLiteralFields": true,
+                    "go.inlayHints.compositeLiteralTypes": true,
+                    "go.inlayHints.constantValues": true,
+                    "go.inlayHints.functionTypeParameters": true,
+                    "go.inlayHints.parameterNames": true,
+                    "go.inlayHints.rangeVariableTypes": true,
+                }, 
+            
+                {
+
+                    // not optimal, but it works for now -  Go inlay hints
+                    "go.inlayHints.assignVariableTypes": false,
+                    "go.inlayHints.compositeLiteralFields": false,
+                    "go.inlayHints.compositeLiteralTypes": false,
+                    "go.inlayHints.constantValues": false,
+                    "go.inlayHints.functionTypeParameters": false,
+                    "go.inlayHints.parameterNames": false,
+                    "go.inlayHints.rangeVariableTypes": false,
+                }
+           ]
+        } 
+    ],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
